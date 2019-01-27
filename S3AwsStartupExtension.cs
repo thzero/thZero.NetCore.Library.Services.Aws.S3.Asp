@@ -19,6 +19,7 @@ limitations under the License.
 
 using System;
 
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -29,9 +30,9 @@ namespace thZero.AspNetCore
     public class S3AwsStartupExtension : AwsStartupExtension
     {
         #region Protected Methods
-        public override void ConfigureServicesInitializeMvcPost(IServiceCollection services, IConfiguration configuration)
+        public override void ConfigureServicesInitializeMvcPost(IServiceCollection services, IHostingEnvironment env, IConfiguration configuration)
         {
-            base.ConfigureServicesInitializeMvcPost(services, configuration);
+            base.ConfigureServicesInitializeMvcPost(services, env, configuration);
 
             services.AddAWSService<IAmazonS3>();
         }

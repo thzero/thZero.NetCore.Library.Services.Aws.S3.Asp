@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.3.6" />
-    <PackageReference Include="AWSSDK.S3" Version="3.3.31.5" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.31.14" />
   </ItemGroup>
 
   <ItemGroup>
